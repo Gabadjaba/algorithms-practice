@@ -33,10 +33,11 @@ function incrString(str) {
 function calcParts(matchedValue, index, stringPart) {
   let firesPart = matchedValue.slice(0, index);
   let secondPart = parseFloat(matchedValue.slice(index, matchedValue.length).join(''));
-  return stringPart + firesPart.join('') + (secondPart + 1);
+  return (stringPart || '') + firesPart.join('') + (secondPart + 1);
 }
 
 console.log(incrString('fooobar000'))
 console.log(incrString('fooobar'))
 console.log(incrString('fooobar999'))
 console.log(incrString('fooobar1'))
+console.log(incrString('1'))
