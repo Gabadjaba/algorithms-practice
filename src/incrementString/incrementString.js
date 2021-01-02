@@ -5,7 +5,7 @@ function incrString(str) {
   let incremented;
 
   if (matched) {
-    let split = [...`${matched}`];
+    let split = [ ...matched ];
     let stringPart = str.match(/^[^0-9]+/gi);
     let temp = '';
 
