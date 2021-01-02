@@ -18,7 +18,6 @@ function validBraces(braces) {
     if (bracersMap[value]) {
       matched.push(value);
     } else {
-      console.log(value, bracersMap[matched[matched.length - 1]])
       if (value === bracersMap[matched[matched.length - 1]]) {
         matched.pop();
       } else {
@@ -34,3 +33,4 @@ console.log(validBraces('()[]{}'))
 console.log(validBraces('({[]})'))
 console.log(validBraces('(){})()'))
 console.log(validBraces(''))
+console.log(validBraces('[(])'))
